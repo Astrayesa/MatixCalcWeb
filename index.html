@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrix Calculator</title>
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
+
 <body>
     <header>
         <h1>Matrix Calculator</h1>
-        <p>Website untu mencari inverse dari suatu matrix</p>
+        <p>Website untu mencari inverse dari suatu matrix 3x3</p>
         <nav>
             <ul>
                 <!-- <li><a href="#home">Utama</a></li> -->
@@ -23,10 +25,29 @@
         <div id="content">
             <div id="calc" class="card">
                 <h2>Kalkulator</h2>
-                <p>ordo:</p>
-                <input type="number" id="ordo-number" value="3">
-                <button id="generate-button">generate</button>
-                <table id="input-table"></table>
+                <!-- <p>ordo:</p>
+                <input type="number" id="ordo-number" value="3"> -->
+                <table id="input-table">
+                    <tr>
+                        <td><input type="text" class="matrix-data"></td>
+                        <td><input type="text" class="matrix-data"></td>
+                        <td><input type="text" class="matrix-data"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="matrix-data"></td>
+                        <td><input type="text" class="matrix-data"></td>
+                        <td><input type="text" class="matrix-data"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="matrix-data"></td>
+                        <td><input type="text" class="matrix-data"></td>
+                        <td><input type="text" class="matrix-data"></td>
+                    </tr>
+                </table>
+                <button id="inverse-button">inverse</button>
+            </div>
+            <div id="history" class="card">
+                <h2>Riwayat</h2>
             </div>
         </div>
         <aside id="about" class="card">
@@ -41,4 +62,5 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/calc.js"></script>
 </body>
+
 </html>

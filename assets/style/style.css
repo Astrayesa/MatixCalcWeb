@@ -2,7 +2,7 @@
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 20px;
-    margin-top: 20px;
+    margin-top  : 20px;
 }
 
 nav li{
@@ -11,10 +11,7 @@ nav li{
 }
 
 footer{
-    /* position: fixed; */
-    right: 0;
-    bottom: 0;
-    left: 0;
+    margin: 10px 0 0 0;
     padding: 1em;
     background-color: #efefef;
     text-align: center;
