@@ -10,12 +10,14 @@
 
 <body>
     <header>
-        <h1>Matrix Calculator</h1>
-        <p>Website untu mencari inverse dari suatu matrix 3x3</p>
+        <div class="jumbotron">
+            <h1>Matrix Calculator</h1>
+            <p>Website untu mencari inverse dari suatu matrix 3x3</p>
+        </div>
         <nav>
             <ul>
-                <!-- <li><a href="#home">Utama</a></li> -->
                 <li><a href="#calc">Kalkulator</a></li>
+                <li><a href="#history">Riwayat</a></li>
                 <li><a href="#about">Tentang</a></li>
             </ul>
         </nav>
@@ -25,29 +27,35 @@
         <div id="content">
             <div id="calc" class="card">
                 <h2>Kalkulator</h2>
-                <!-- <p>ordo:</p>
-                <input type="number" id="ordo-number" value="3"> -->
-                <table id="input-table">
-                    <tr>
-                        <td><input type="text" class="matrix-data"></td>
-                        <td><input type="text" class="matrix-data"></td>
-                        <td><input type="text" class="matrix-data"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" class="matrix-data"></td>
-                        <td><input type="text" class="matrix-data"></td>
-                        <td><input type="text" class="matrix-data"></td>
-                    </tr>
-                    <tr>
-                        <td><input type="text" class="matrix-data"></td>
-                        <td><input type="text" class="matrix-data"></td>
-                        <td><input type="text" class="matrix-data"></td>
-                    </tr>
-                </table>
-                <button id="inverse-button">inverse</button>
-                <br>
-                <h3>Inverse: </h3>
-                <table id="output-table"></table>
+                <div class="flex-container">
+
+                <div id="masukan" class="card">
+                    <h3>Masukan: </h3>
+                    <table id="input-table">
+                        <tr>
+                            <td><input type="text" class="matrix-data"></td>
+                            <td><input type="text" class="matrix-data"></td>
+                            <td><input type="text" class="matrix-data"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="matrix-data"></td>
+                            <td><input type="text" class="matrix-data"></td>
+                            <td><input type="text" class="matrix-data"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" class="matrix-data"></td>
+                            <td><input type="text" class="matrix-data"></td>
+                            <td><input type="text" class="matrix-data"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button id="inverse-button">inverse</button>
+                </div>
+                <div id="keluaran" class="card">
+                    <h3>Inverse: </h3>
+                    <table id="output-table"></table>
+                </div>
+                </div>
             </div>
             <div id="history" class="card">
                 <h2>Riwayat</h2>
@@ -60,9 +68,9 @@
                 <figcaption>Muhamad Sepryan Astrayesa</figcaption>
             </figure>
             <div class="socmed">
-                <a href="https://facebook.com/muhamad.astrayesa" target="_blank"><img src="assets/img/iconfinder_Facebook_194929.svg" alt="iconfinder_Facebook_194929" height="30px"></a>
-                <a href="twitter.com" target="_blank"><img src="assets/img/iconfinder_Twitter_194909.svg" alt="iconfinder_Twitter_194909" height="30px"></a>
-                <a href="https://github.com/Astrayesa" target="_blank"><img src="assets/img/iconfinder_github_1218140.svg" alt="iconfinder_github_1218140" height="30px"></a>
+                <a href="https://facebook.com/muhamad.astrayesa" target="_blank"><img src="assets/img/iconfinder_Facebook_194929.svg" alt="iconfinder_Facebook_194929" height="40px"></a>
+                <a href="https://twitter.com/Astrayesa" target="_blank"><img src="assets/img/iconfinder_Twitter_194909.svg" alt="iconfinder_Twitter_194909" height="40px"></a>
+                <a href="https://github.com/Astrayesa" target="_blank"><img src="assets/img/iconfinder_github_1218140.svg" alt="iconfinder_github_1218140" height="40px"></a>
             </div>
         </aside>
     </main>
@@ -72,7 +80,7 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/calc.js"></script>
+    <script src="assets/js/storage.js"></script>
 </body>
 
 </html>

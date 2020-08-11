@@ -1,17 +1,3 @@
-// function input_setup(ordo){
-//     let input_table = document.getElementById('input-table');
-//     input_table.innerHTML = "";
-//     let inp_field = '<input type="text" class="matrix-data">';
-//     for (let j = 0; j < ordo; j++) {
-//         let table_row = document.createElement("tr");
-//         for (let i = 0; i < ordo; i++) {
-//             let table_data = document.createElement("td");
-//             table_data.innerHTML = inp_field;
-//             table_row.appendChild(table_data);
-//         }
-//         input_table.appendChild(table_row);
-//     }
-// }
 
 function printInverse(invarr){
     let input_table = document.getElementById('output-table');
@@ -41,17 +27,13 @@ function deter(arr){
 const inverse_button = document.getElementById("inverse-button");
 inverse_button.addEventListener('click', function(event){
     let matrix_data = document.getElementsByClassName("matrix-data");
-    // let determinan =  matrix_data[0].value * matrix_data[4].value * matrix_data[8].value
-    //                 + matrix_data[1].value * matrix_data[5].value * matrix_data[6].value
-    //                 + matrix_data[2].value * matrix_data[3].value * matrix_data[7].value
-    //                 - matrix_data[2].value * matrix_data[4].value * matrix_data[6].value
-    //                 - matrix_data[0].value * matrix_data[5].value * matrix_data[7].value
-    //                 - matrix_data[1].value * matrix_data[3].value * matrix_data[8].value;
-    // alert(determinan);
-    kofaktor = new Array(3);
+    let inputMatrix = new Array(3);
+    let kofaktor = new Array(3);
     for (let i = 0; i < 3; i++){
+        inputMatrix[i] = new Array(3);
         kofaktor[i] = new Array(3);
         for(let j = 0; j < 3; j++){
+            inputMatrix[i][j] = parseInt(matrix_data[toidx(i, j)].value);
             minor = new Array(4);
             let ind = 0;
             for(let k = 0; k < 3; k++){
@@ -70,17 +52,34 @@ inverse_button.addEventListener('click', function(event){
         determinan += kofaktor[i][0] * matrix_data[toidx(i, 0)].value;
     }
 
+    const inverse = new Array(3);
     if(determinan == 0){
         alert("Determinan = 0, maka matrix tersebut tidak memiliki inverse");
-        return;
-    }
-
-    const inverse = new Array(3);
-    for (let i = 0; i < 3; i++){
-        inverse[i] = new Array(3);
-        for (let j = 0; j < 3; j++){
-            inverse[i][j] = (kofaktor[j][i] / determinan).toFixed(3);
+        // const inverse = new Array(3);
+        for (let i = 0; i < 3; i++){
+            inverse[i] = new Array(3);
+            for (let j = 0; j < 3; j++){
+                inverse[i][j] = '-';
+            }
         }
     }
+    else{
+        // const inverse = new Array(3);
+        for (let i = 0; i < 3; i++){
+            inverse[i] = new Array(3);
+            for (let j = 0; j < 3; j++){
+                inverse[i][j] = (kofaktor[j][i] / determinan).toFixed(3);
+            }
+        }
+    }
+
+    const history = {
+        inputMatrix : inputMatrix,
+        determinan : determinan,
+        inverseMatrix : inverse
+    }
+
+    putHistory(history);
+
     printInverse(inverse);
 });

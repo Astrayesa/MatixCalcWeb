@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .card {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -5,9 +9,74 @@
     margin-top  : 20px;
 }
 
+.jumbotron {
+   font-size: 20px;
+   padding: 60px;
+   background-color: #00c8eb;
+   text-align: center;
+   color: white;
+}
+
+nav {
+    background-color: #00a2c6;
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
 nav li{
     display: inline;
     list-style-type: none;
+    padding: 2px;
+    margin: 5px;
+}
+
+nav a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    font-weight: bolder;
+}
+
+#calc{
+    overflow: auto;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.matrix-data{
+    width: 40px;
+}
+
+#masukan, #keluaran {
+    /* flex-grow: 1; */
+    flex-basis: 50%;
+    padding: 10px;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+
+aside{
+    text-align: center;
+}
+/* figure, .socmed{
+    text-align: center;
+
+} */
+
+.socmed{
+    height: 60px;
+}
+
+.socmed a img:hover{
+    height: 50px;
 }
 
 footer{
@@ -15,4 +84,14 @@ footer{
     padding: 1em;
     background-color: #efefef;
     text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+    .flex-container{
+        display: unset;
+    }
+
+    nav li{
+        display: block;
+    }
 }
