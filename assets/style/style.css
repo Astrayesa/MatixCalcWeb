@@ -9,6 +9,10 @@
     margin-top  : 20px;
 }
 
+header{
+    display: inline;
+}
+
 .jumbotron {
    font-size: 20px;
    padding: 60px;
@@ -62,14 +66,27 @@ nav a:hover{
     margin-right: auto; */
 }
 
+#history{
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+#history #history-table{
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    border: solid black;
+}
+
+#histoty-table td{
+    text-align: center;
+    margin: auto;
+}
 
 aside{
     text-align: center;
 }
-/* figure, .socmed{
-    text-align: center;
-
-} */
 
 .socmed{
     height: 60px;
